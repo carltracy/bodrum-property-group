@@ -480,6 +480,7 @@ section { padding: 100px 2rem; }
 .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 </style>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -931,5 +932,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 </script>
 
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
+</script>
 </body>
 </html>
