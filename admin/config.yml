@@ -3,7 +3,7 @@ backend:
   repo: carltracy/bodrum-property-group
   branch: main
   auth_type: pkce
-  app_id: Ov23liv5mRZaKtzo0r6r
+  app_id: Iv23lirRLyk7dE7vT8QA
 
 site_url: https://carltracy.github.io/bodrum-property-group
 display_url: https://carltracy.github.io/bodrum-property-group
