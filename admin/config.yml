@@ -1,15 +1,12 @@
 backend:
-  name: github
-  repo: carltracy/bodrum-property-group
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23liv5mRZaKtzo0r6r
 
-site_url: https://carltracy.github.io/bodrum-property-group
-display_url: https://carltracy.github.io/bodrum-property-group
+site_url: https://bodrum-properties-ltd.netlify.app
+display_url: https://bodrum-properties-ltd.netlify.app
 
 media_folder: "assets"
-public_folder: "/bodrum-property-group/assets"
+public_folder: "/assets"
 
 collections:
   - name: "data"
