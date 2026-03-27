@@ -12,19 +12,6 @@ items:
     title: test 1
     badge_class: badge-lease
     description: none
-  - baths: 1
-    bathrooms: 1
-    price: £185,000
-    area: 78
-    featured: true
-    beds: 2
-    status: Available
-    address: 2 Bed Semi, Rochdale, Manchester
-    location: manchester
-    bedrooms: 3
-    title: test 2
-    badge_class: badge-available
-    description: none
   - baths: 2
     bathrooms: 3
     price: £210,000
