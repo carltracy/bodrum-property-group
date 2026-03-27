@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -667,58 +669,21 @@ section { padding: 100px 2rem; }
     <h2 class="section-title">Learn From Ceyhan</h2>
     <p class="section-subtitle">Watch Ceyhan share his knowledge on creative property investment, lease options, and building a property business.</p>
     <div class="videos-grid">
+      {% for video in site.data.videos %}
       <div class="video-card reveal">
         <div class="video-wrapper">
           <video controls preload="metadata" playsinline>
-            <source src="assets/morgage problem solving and property deals.mp4" type="video/mp4">
+            <source src="{{ video.src }}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="video-info">
-          <h3>How I Turned a Failed Mortgage Into a 3-Year Lease Option Deal</h3>
-          <p>Discover how Ceyhan transformed a mortgage rejection into a creative property deal that worked for everyone involved.</p>
-          <span class="video-tag">Case Study</span>
+          <h3>{{ video.title }}</h3>
+          <p>{{ video.description }}</p>
+          <span class="video-tag">{{ video.tag }}</span>
         </div>
       </div>
-      <div class="video-card reveal">
-        <div class="video-wrapper">
-          <video controls preload="metadata" playsinline>
-            <source src="assets/Ceyhan on lease options.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-info">
-          <h3>Why Lease Options Are a Game-Changer</h3>
-          <p>Ceyhan explains the power of lease options and why they're the ultimate creative property investment technique.</p>
-          <span class="video-tag">Strategy</span>
-        </div>
-      </div>
-      <div class="video-card reveal">
-        <div class="video-wrapper">
-          <video controls preload="metadata" playsinline>
-            <source src="assets/how he started viewing properties as a business.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-info">
-          <h3>Viewing Properties as a Business</h3>
-          <p>How Ceyhan started viewing properties as a business, shifting his mindset from homeowner to investor.</p>
-          <span class="video-tag">Mindset</span>
-        </div>
-      </div>
-      <div class="video-card reveal">
-        <div class="video-wrapper">
-          <video controls preload="metadata" playsinline>
-            <source src="assets/video covering how he learned investing.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="video-info">
-          <h3>How I Learned Property Investing</h3>
-          <p>Ceyhan's journey into property investment — the lessons, the mistakes, and the breakthroughs that shaped his approach.</p>
-          <span class="video-tag">Journey</span>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -730,51 +695,23 @@ section { padding: 100px 2rem; }
     <h2 class="section-title">Featured Properties</h2>
     <p class="section-subtitle">A selection of current and recent opportunities sourced through creative investment strategies across Greater Manchester.</p>
     <div class="properties-grid">
+      {% for property in site.data.properties %}
       <div class="property-card reveal">
         <div class="property-img">
           <span class="placeholder-house">🏠</span>
-          <span class="property-badge badge-lease">Lease Option</span>
+          <span class="property-badge {{ property.badge_class }}">{{ property.status }}</span>
         </div>
         <div class="property-details">
-          <div class="property-price">£145,000</div>
-          <div class="property-address">3 Bed Terrace, Oldham, Manchester</div>
+          <div class="property-price">{{ property.price }}</div>
+          <div class="property-address">{{ property.address }}</div>
           <div class="property-features">
-            <span class="property-feature">🛏 3 Beds</span>
-            <span class="property-feature">🚿 1 Bath</span>
-            <span class="property-feature">📐 95m²</span>
+            <span class="property-feature">🛏 {{ property.beds }} Beds</span>
+            <span class="property-feature">🚿 {{ property.baths }} Bath</span>
+            <span class="property-feature">📐 {{ property.area }}m²</span>
           </div>
         </div>
       </div>
-      <div class="property-card reveal">
-        <div class="property-img">
-          <span class="placeholder-house">🏠</span>
-          <span class="property-badge badge-available">Available</span>
-        </div>
-        <div class="property-details">
-          <div class="property-price">£185,000</div>
-          <div class="property-address">2 Bed Semi, Rochdale, Manchester</div>
-          <div class="property-features">
-            <span class="property-feature">🛏 2 Beds</span>
-            <span class="property-feature">🚿 1 Bath</span>
-            <span class="property-feature">📐 78m²</span>
-          </div>
-        </div>
-      </div>
-      <div class="property-card reveal">
-        <div class="property-img">
-          <span class="placeholder-house">🏠</span>
-          <span class="property-badge badge-sold">Completed</span>
-        </div>
-        <div class="property-details">
-          <div class="property-price">£210,000</div>
-          <div class="property-address">4 Bed Detached, Bolton, Manchester</div>
-          <div class="property-features">
-            <span class="property-feature">🛏 4 Beds</span>
-            <span class="property-feature">🚿 2 Bath</span>
-            <span class="property-feature">📐 135m²</span>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -786,39 +723,19 @@ section { padding: 100px 2rem; }
     <h2 class="section-title" style="color:white">What People Say</h2>
     <p class="section-subtitle">Real feedback from investors and clients who have worked with Bodrum Property Group.</p>
     <div class="testimonials-grid">
+      {% for testimonial in site.data.testimonials %}
       <div class="testimonial-card reveal">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"Ceyhan helped me secure my first investment property through a lease option when I thought I'd never get on the ladder. His knowledge of creative strategies is outstanding."</p>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
+          <div class="testimonial-avatar">{{ testimonial.avatar }}</div>
           <div>
-            <div class="testimonial-name">Manchester Investor</div>
-            <div class="testimonial-role">First-time investor</div>
+            <div class="testimonial-name">{{ testimonial.name }}</div>
+            <div class="testimonial-role">{{ testimonial.role }}</div>
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"After my mortgage fell through, Ceyhan showed me there was another way. He structured a deal that worked for me and the seller. Absolutely brilliant service."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">S</div>
-          <div>
-            <div class="testimonial-name">Satisfied Client</div>
-            <div class="testimonial-role">Property buyer</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"Professional, knowledgeable, and genuinely cares about finding the right deal. Ceyhan sourced a fantastic below-market property that fit my portfolio perfectly."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">A</div>
-          <div>
-            <div class="testimonial-name">Experienced Investor</div>
-            <div class="testimonial-role">Portfolio builder</div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
