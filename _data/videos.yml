@@ -1,19 +1,20 @@
-- src: "assets/morgage problem solving and property deals.mp4"
-  title: "How I Turned a Failed Mortgage Into a 3-Year Lease Option Deal"
-  description: "Discover how Ceyhan transformed a mortgage rejection into a creative property deal that worked for everyone involved."
-  tag: "Case Study"
-
-- src: "assets/Ceyhan on lease options.mp4"
-  title: "Why Lease Options Are a Game-Changer"
-  description: "Ceyhan explains the power of lease options and why they're the ultimate creative property investment technique."
-  tag: "Strategy"
-
-- src: "assets/how he started viewing properties as a business.mp4"
-  title: "Viewing Properties as a Business"
-  description: "How Ceyhan started viewing properties as a business, shifting his mindset from homeowner to investor."
-  tag: "Mindset"
-
-- src: "assets/video covering how he learned investing.mp4"
-  title: "How I Learned Property Investing"
-  description: "Ceyhan's journey into property investment — the lessons, the mistakes, and the breakthroughs that shaped his approach."
-  tag: "Journey"
+items:
+  - src: "assets/morgage problem solving and property deals.mp4"
+    title: "How I Turned a Failed Mortgage Into a 3-Year Lease Option Deal"
+    description: "Discover how Ceyhan transformed a mortgage rejection into a creative property deal that worked for everyone involved."
+    tag: "Case Study"
+  
+  - src: "assets/Ceyhan on lease options.mp4"
+    title: "Why Lease Options Are a Game-Changer"
+    description: "Ceyhan explains the power of lease options and why they're the ultimate creative property investment technique."
+    tag: "Strategy"
+  
+  - src: "assets/how he started viewing properties as a business.mp4"
+    title: "Viewing Properties as a Business"
+    description: "How Ceyhan started viewing properties as a business, shifting his mindset from homeowner to investor."
+    tag: "Mindset"
+  
+  - src: "assets/video covering how he learned investing.mp4"
+    title: "How I Learned Property Investing"
+    description: "Ceyhan's journey into property investment — the lessons, the mistakes, and the breakthroughs that shaped his approach."
+    tag: "Journey"

@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: carltracy/bodrum-property-group
+  branch: main
+  auth_type: pkce
+  app_id: Ov23liv5mRZaKtzo0r6r
+
+site_url: https://carltracy.github.io/bodrum-property-group
+display_url: https://carltracy.github.io/bodrum-property-group
+
+media_folder: "assets"
+public_folder: "/bodrum-property-group/assets"
+
+collections:
+  - name: "data"
+    label: "Site Content"
+    files:
+      - name: "properties"
+        label: "Properties"
+        file: "_data/properties.yml"
+        fields:
+          - label: "Properties"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Bedrooms", name: "bedrooms", widget: "number", value_type: "int" }
+              - { label: "Bathrooms", name: "bathrooms", widget: "number", value_type: "int" }
+              - { label: "Area", name: "area", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "_data/testimonials.yml"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+      - name: "videos"
+        label: "Videos"
+        file: "_data/videos.yml"
+        fields:
+          - label: "Videos"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "File", name: "file", widget: "file" }

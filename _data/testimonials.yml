@@ -1,14 +1,15 @@
-- text: "Ceyhan helped me secure my first investment property through a lease option when I thought I'd never get on the ladder. His knowledge of creative strategies is outstanding."
-  avatar: "M"
-  name: "Manchester Investor"
-  role: "First-time investor"
-
-- text: "After my mortgage fell through, Ceyhan showed me there was another way. He structured a deal that worked for me and the seller. Absolutely brilliant service."
-  avatar: "S"
-  name: "Satisfied Client"
-  role: "Property buyer"
-
-- text: "Professional, knowledgeable, and genuinely cares about finding the right deal. Ceyhan sourced a fantastic below-market property that fit my portfolio perfectly."
-  avatar: "A"
-  name: "Experienced Investor"
-  role: "Portfolio builder"
+items:
+  - text: "Ceyhan helped me secure my first investment property through a lease option when I thought I'd never get on the ladder. His knowledge of creative strategies is outstanding."
+    avatar: "M"
+    name: "Manchester Investor"
+    role: "First-time investor"
+  
+  - text: "After my mortgage fell through, Ceyhan showed me there was another way. He structured a deal that worked for me and the seller. Absolutely brilliant service."
+    avatar: "S"
+    name: "Satisfied Client"
+    role: "Property buyer"
+  
+  - text: "Professional, knowledgeable, and genuinely cares about finding the right deal. Ceyhan sourced a fantastic below-market property that fit my portfolio perfectly."
+    avatar: "A"
+    name: "Experienced Investor"
+    role: "Portfolio builder"

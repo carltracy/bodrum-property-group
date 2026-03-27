@@ -669,7 +669,7 @@ section { padding: 100px 2rem; }
     <h2 class="section-title">Learn From Ceyhan</h2>
     <p class="section-subtitle">Watch Ceyhan share his knowledge on creative property investment, lease options, and building a property business.</p>
     <div class="videos-grid">
-      {% for video in site.data.videos %}
+      {% for video in site.data.videos.items %}
       <div class="video-card reveal">
         <div class="video-wrapper">
           <video controls preload="metadata" playsinline>
@@ -695,7 +695,7 @@ section { padding: 100px 2rem; }
     <h2 class="section-title">Featured Properties</h2>
     <p class="section-subtitle">A selection of current and recent opportunities sourced through creative investment strategies across Greater Manchester.</p>
     <div class="properties-grid">
-      {% for property in site.data.properties %}
+      {% for property in site.data.properties.items %}
       <div class="property-card reveal">
         <div class="property-img">
           <span class="placeholder-house">🏠</span>
@@ -723,7 +723,7 @@ section { padding: 100px 2rem; }
     <h2 class="section-title" style="color:white">What People Say</h2>
     <p class="section-subtitle">Real feedback from investors and clients who have worked with Bodrum Property Group.</p>
     <div class="testimonials-grid">
-      {% for testimonial in site.data.testimonials %}
+      {% for testimonial in site.data.testimonials.items %}
       <div class="testimonial-card reveal">
         <div class="testimonial-stars">★★★★★</div>
         <p class="testimonial-text">"{{ testimonial.text }}"</p>
