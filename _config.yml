@@ -1,11 +1,6 @@
 title: Bodrum Property Group
-description: Creative Property Investment - Manchester
-url: "https://carltracy.github.io"
-baseurl: "/bodrum-property-group"
-
-markdown: kramdown
-
+baseurl: ""
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
+  - README.md
