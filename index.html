@@ -699,7 +699,11 @@ section { padding: 100px 2rem; }
       {% for property in site.data.properties.items %}
       <div class="property-card reveal">
         <div class="property-img">
+          {% if property.image and property.image != "" %}
+          <img src="{{ property.image }}" alt="{{ property.address }}" style="width:100%;height:100%;object-fit:cover;">
+          {% else %}
           <span class="placeholder-house">🏠</span>
+          {% endif %}
           <span class="property-badge {{ property.badge_class }}">{{ property.status }}</span>
         </div>
         <div class="property-details">
