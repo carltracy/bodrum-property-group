@@ -1,36 +1,25 @@
 items:
-  - baths: 1
-    bathrooms: 2
-    price: £145,000
-    area: 95
-    featured: true
+  - price: "£145,000"
+    address: "3 Bed Terrace, Oldham, Manchester"
     beds: 3
-    status: Lease Option
-    address: 3 Bed Terrace, Oldham, Manchester
-    location: manchester
-    bedrooms: 4
-    title: test 1
-    badge_class: badge-lease
-    description: none
-  - baths: 2
-    bathrooms: 3
-    price: £210,000
-    area: 135
-    featured: true
+    baths: 1
+    area: 95
+    status: "Lease Option"
+    badge_class: "badge-lease"
+    image: ""
+  - price: "£210,000"
+    address: "4 Bed Detached, Bolton, Manchester"
     beds: 4
-    status: Completed
-    address: 4 Bed Detached, Bolton, Manchester
-    location: Birmingham
-    bedrooms: 3
-    title: 5 bed
-    badge_class: badge-sold
-    description: Brummy Town
-  - bathrooms: 2
-    price: $1000000
-    area: Ardwick
-    featured: false
-    location: 58 Lauderdale Cresent
-    bedrooms: 4
-    title: Nice 4 Bedroom house
-    image: /assets/screenshot_20260327_232223.png
-    description: Shared house in quiet ardwick.
+    baths: 2
+    area: 135
+    status: "Completed"
+    badge_class: "badge-sold"
+    image: ""
+  - price: "£1,000,000"
+    address: "58 Lauderdale Crescent, Ardwick"
+    beds: 4
+    baths: 2
+    area: 120
+    status: "Available"
+    badge_class: "badge-available"
+    image: "/assets/screenshot_20260327_232223.png"
