@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bodrum Property Group | Creative Property Investment - Manchester</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --deep-navy: #0a1628;
+  --rich-blue: #0d2847;
+  --accent-teal: #00b4d8;
+  --accent-gold: #d4a843;
+  --warm-white: #f5f0eb;
+  --light-gray: #e8e2db;
+  --text-dark: #1a1a1a;
+  --text-muted: #6b7280;
+  --success-green: #22c55e;
+  --gradient-hero: linear-gradient(135deg, #0a1628 0%, #0d2847 40%, #134074 100%);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-dark);
+  background: var(--warm-white);
+  overflow-x: hidden;
+}
+
+/* ========== NAVIGATION ========== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10, 22, 40, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,180,216,0.15);
+  transition: all 0.4s ease;
+}
+.navbar.scrolled { background: rgba(10, 22, 40, 0.98); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+.nav-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.9rem 2rem;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none; color: white;
+}
+.nav-logo-icon {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.nav-logo-icon svg { width: 100%; height: 100%; }
+.logo-svg-large { width: 80px; height: 80px; }
+.logo-svg-large svg { width: 100%; height: 100%; }
+.nav-logo-text { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.15rem; letter-spacing: 0.5px; }
+.nav-logo-text span { color: var(--accent-gold); }
+.nav-links { display: flex; gap: 2rem; align-items: center; list-style: none; }
+.nav-links a {
+  color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.9rem;
+  font-weight: 500; letter-spacing: 0.3px; transition: color 0.3s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+  background: var(--accent-gold); transition: width 0.3s;
+}
+.nav-links a:hover { color: #fff; }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: linear-gradient(135deg, var(--accent-gold), #c4943a);
+  color: var(--deep-navy) !important; padding: 10px 24px; border-radius: 8px;
+  font-weight: 700 !important; letter-spacing: 0.5px;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212,168,67,0.4); }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 5px; }
+.hamburger span { width: 26px; height: 2px; background: white; transition: all 0.3s; border-radius: 2px; }
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  background: var(--gradient-hero);
+  position: relative; overflow: hidden;
+  padding: 120px 2rem 80px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect fill="url(%23g)" width="100" height="100"/></svg>');
+}
+.hero::after {
+  content: ''; position: absolute; top: -50%; right: -20%; width: 80%; height: 200%;
+  background: radial-gradient(ellipse, rgba(0,180,216,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1280px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,180,216,0.12); border: 1px solid rgba(0,180,216,0.25);
+  border-radius: 50px; padding: 8px 20px; margin-bottom: 1.5rem;
+  color: var(--accent-teal); font-size: 0.85rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  animation: fadeInUp 0.8s ease forwards;
+}
+.hero-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--success-green); animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero h1 {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1;
+  color: #fff; margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s 0.2s ease both;
+}
+.hero h1 .highlight {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-teal));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-desc {
+  font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,0.7);
+  margin-bottom: 2.5rem; max-width: 520px;
+  animation: fadeInUp 0.8s 0.4s ease both;
+}
+.hero-buttons {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  animation: fadeInUp 0.8s 0.6s ease both;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--accent-gold), #c4943a);
+  color: var(--deep-navy); padding: 16px 32px; border-radius: 12px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  transition: all 0.3s; border: none; cursor: pointer;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(212,168,67,0.35); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2);
+  color: #fff; padding: 16px 32px; border-radius: 12px;
+  font-weight: 600; font-size: 1rem; text-decoration: none;
+  transition: all 0.3s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); }
+.hero-image {
+  position: relative;
+  animation: fadeInRight 1s 0.4s ease both;
+}
+.hero-image img {
+  width: 100%; max-width: 600px; border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+.hero-stat-cards {
+  position: absolute; bottom: -20px; left: -20px; right: -20px;
+  display: flex; gap: 12px;
+}
+.hero-stat {
+  flex: 1; background: rgba(255,255,255,0.1); backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.15); border-radius: 14px;
+  padding: 16px; text-align: center;
+}
+.hero-stat-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.6rem; color: var(--accent-gold); }
+.hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+
+/* ========== SECTION STYLES ========== */
+section { padding: 100px 2rem; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--accent-teal); font-weight: 600; font-size: 0.85rem;
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;
+}
+.section-label::before { content: ''; width: 30px; height: 2px; background: var(--accent-teal); }
+.section-title {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+.section-subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; line-height: 1.7; }
+
+/* ========== ABOUT ========== */
+.about { background: var(--warm-white); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-top: 3rem; }
+.about-image-wrapper { position: relative; }
+.about-image-wrapper img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.about-image-wrapper::before {
+  content: ''; position: absolute; top: -15px; left: -15px;
+  width: 120px; height: 120px; border: 3px solid var(--accent-gold);
+  border-radius: 20px 0 0 0; z-index: -1;
+}
+.about-content p { font-size: 1.05rem; line-height: 1.8; color: #444; margin-bottom: 1.2rem; }
+.about-highlights {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;
+}
+.about-highlight {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 16px; border-radius: 12px;
+  background: white; border: 1px solid var(--light-gray);
+  transition: all 0.3s;
+}
+.about-highlight:hover { border-color: var(--accent-teal); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+.about-highlight-icon {
+  width: 40px; height: 40px; min-width: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(212,168,67,0.1));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.about-highlight h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 2px; }
+.about-highlight p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin: 0; }
+
+/* ========== SERVICES ========== */
+.services { background: var(--deep-navy); color: white; position: relative; overflow: hidden; }
+.services::before {
+  content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%;
+  background: radial-gradient(ellipse at top right, rgba(0,180,216,0.06), transparent 70%);
+}
+.services .section-subtitle { color: rgba(255,255,255,0.6); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; position: relative; z-index: 1; }
+.service-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 2.5rem 2rem;
+  transition: all 0.4s; position: relative; overflow: hidden;
+}
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-gold));
+  opacity: 0; transition: opacity 0.4s;
+}
+.service-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); border-color: rgba(255,255,255,0.15); }
+.service-card:hover::before { opacity: 1; }
+.service-icon {
+  width: 60px; height: 60px; border-radius: 16px;
+  background: linear-gradient(135deg, rgba(0,180,216,0.15), rgba(212,168,67,0.15));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; margin-bottom: 1.5rem;
+}
+.service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1rem; }
+.service-card p { color: rgba(255,255,255,0.6); line-height: 1.7; font-size: 0.95rem; }
+.service-tag {
+  display: inline-block; margin-top: 1.2rem; padding: 6px 14px;
+  background: rgba(0,180,216,0.1); border: 1px solid rgba(0,180,216,0.2);
+  border-radius: 50px; font-size: 0.78rem; color: var(--accent-teal);
+  font-weight: 600; letter-spacing: 0.5px;
+}
+
+/* ========== WHY LEASE OPTIONS ========== */
+.lease-options { background: white; }
+.lease-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.lease-card {
+  padding: 2rem; border-radius: 16px; text-align: center;
+  border: 1px solid var(--light-gray); background: var(--warm-white);
+  transition: all 0.4s; position: relative;
+}
+.lease-card:hover { border-color: var(--accent-teal); transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+.lease-card-num {
+  font-family: 'Playfair Display', serif; font-weight: 900;
+  font-size: 3rem; color: rgba(0,180,216,0.15); line-height: 1; margin-bottom: 0.5rem;
+}
+.lease-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.8rem; }
+.lease-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+/* ========== VIDEO SECTION ========== */
+.videos { background: var(--warm-white); }
+.videos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem; }
+.video-card {
+  border-radius: 20px; overflow: hidden;
+  background: white; border: 1px solid var(--light-gray);
+  transition: all 0.4s;
+}
+.video-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.video-wrapper {
+  position: relative; width: 100%; background: var(--deep-navy);
+  display: flex; align-items: center; justify-content: center;
+}
+.video-wrapper video {
+  width: 100%; height: auto; display: block;
+  max-height: 400px; object-fit: contain; background: #000;
+}
+.video-info { padding: 1.5rem; }
+.video-info h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.video-info p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+.video-tag {
+  display: inline-block; margin-top: 0.8rem; padding: 4px 12px;
+  background: rgba(212,168,67,0.1); border-radius: 50px;
+  font-size: 0.75rem; color: var(--accent-gold); font-weight: 600;
+}
+
+/* ========== PROPERTIES (MOCK) ========== */
+.properties { background: white; }
+.properties-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.property-card {
+  border-radius: 20px; overflow: hidden;
+  border: 1px solid var(--light-gray); background: var(--warm-white);
+  transition: all 0.4s;
+}
+.property-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+.property-img {
+  height: 220px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--rich-blue), var(--deep-navy));
+  display: flex; align-items: center; justify-content: center;
+}
+.property-img .placeholder-house {
+  font-size: 4rem; opacity: 0.3;
+}
+.property-badge {
+  position: absolute; top: 12px; left: 12px;
+  padding: 6px 14px; border-radius: 50px;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px;
+}
+.badge-lease { background: var(--accent-teal); color: white; }
+.badge-available { background: var(--success-green); color: white; }
+.badge-sold { background: var(--accent-gold); color: var(--deep-navy); }
+.property-details { padding: 1.5rem; }
+.property-price { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.4rem; color: var(--deep-navy); }
+.property-address { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; }
+.property-features { display: flex; gap: 1rem; margin-top: 1rem; }
+.property-feature {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 0.8rem; color: var(--text-muted);
+}
+
+/* ========== TESTIMONIALS ========== */
+.testimonials { background: var(--deep-navy); color: white; position: relative; overflow: hidden; }
+.testimonials::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at bottom left, rgba(212,168,67,0.06), transparent 60%);
+}
+.testimonials .section-subtitle { color: rgba(255,255,255,0.6); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; position: relative; z-index: 1; }
+.testimonial-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 2rem;
+}
+.testimonial-stars { color: var(--accent-gold); font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 1rem; }
+.testimonial-text { color: rgba(255,255,255,0.75); line-height: 1.7; font-size: 0.95rem; font-style: italic; margin-bottom: 1.5rem; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-gold));
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem; color: var(--deep-navy);
+}
+.testimonial-name { font-weight: 600; font-size: 0.95rem; }
+.testimonial-role { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+/* ========== GALLERY ========== */
+.gallery { background: var(--warm-white); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.gallery-item {
+  border-radius: 16px; overflow: hidden; position: relative; cursor: pointer;
+  aspect-ratio: 4/3;
+}
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s;
+}
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,22,40,0.8) 0%, transparent 60%);
+  display: flex; align-items: flex-end; padding: 1.2rem;
+  opacity: 0; transition: opacity 0.4s;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay p { color: white; font-weight: 600; font-size: 0.9rem; }
+
+/* ========== CONTACT ========== */
+.contact { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+.contact-info { display: flex; flex-direction: column; gap: 2rem; }
+.contact-item { display: flex; gap: 16px; align-items: flex-start; }
+.contact-icon {
+  width: 50px; height: 50px; min-width: 50px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(212,168,67,0.1));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+}
+.contact-item h4 { font-size: 1rem; margin-bottom: 4px; }
+.contact-item p { color: var(--text-muted); font-size: 0.95rem; }
+.contact-item a { color: var(--accent-teal); text-decoration: none; font-weight: 500; }
+.contact-item a:hover { text-decoration: underline; }
+
+.contact-form {
+  background: var(--warm-white); border-radius: 20px; padding: 2.5rem;
+  border: 1px solid var(--light-gray);
+}
+.contact-form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 6px; color: var(--text-dark); }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; padding: 14px 16px; border-radius: 12px;
+  border: 1px solid var(--light-gray); background: white;
+  font-family: inherit; font-size: 0.95rem; color: var(--text-dark);
+  transition: border-color 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  outline: none; border-color: var(--accent-teal); box-shadow: 0 0 0 3px rgba(0,180,216,0.1);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-submit {
+  width: 100%; padding: 16px; border: none; border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-gold), #c4943a);
+  color: var(--deep-navy); font-weight: 700; font-size: 1rem;
+  cursor: pointer; transition: all 0.3s; font-family: inherit;
+}
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212,168,67,0.35); }
+
+/* ========== FOOTER ========== */
+.footer {
+  background: var(--deep-navy); color: white; padding: 60px 2rem 30px;
+  border-top: 1px solid rgba(0,180,216,0.1);
+}
+.footer-inner { max-width: 1280px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand p { color: rgba(255,255,255,0.5); line-height: 1.7; margin-top: 1rem; font-size: 0.9rem; max-width: 320px; }
+.footer h4 {
+  font-family: 'Playfair Display', serif; font-size: 1rem;
+  margin-bottom: 1.2rem; color: var(--accent-gold);
+}
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 0.6rem; }
+.footer ul a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+.footer ul a:hover { color: var(--accent-teal); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1.5rem; display: flex; justify-content: space-between;
+  align-items: center; font-size: 0.85rem; color: rgba(255,255,255,0.4);
+}
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem;
+  transition: all 0.3s;
+}
+.footer-socials a:hover { background: rgba(0,180,216,0.15); border-color: var(--accent-teal); color: var(--accent-teal); }
+
+/* ========== MOBILE ========== */
+@media (max-width: 1024px) {
+  .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .properties-grid { grid-template-columns: repeat(2, 1fr); }
+  .lease-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,22,40,0.98); flex-direction: column; padding: 1.5rem 2rem; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08); }
+  .nav-links.open { display: flex; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-buttons { justify-content: center; }
+  .hero-image { order: -1; }
+  .hero-stat-cards { position: relative; bottom: 0; left: 0; right: 0; margin-top: 1rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .services-grid, .testimonials-grid, .videos-grid { grid-template-columns: 1fr; }
+  .properties-grid { grid-template-columns: 1fr; }
+  .lease-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+
+/* ========== SCROLL ANIMATION ========== */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-icon"><svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="rg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e83a42"/><stop offset="100%" stop-color="#c42d35"/></linearGradient></defs><polygon points="40,160 100,110 160,160" fill="url(#rg1)"/><polygon points="90,140 140,98 190,140" fill="#d43540"/><polygon points="130,122 170,88 210,122" fill="#bc2a32"/><path d="M 30,165 Q 80,158 150,162 Q 200,165 260,155" stroke="#1a7ab5" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M 30,177 Q 80,170 150,174 Q 200,177 260,167" stroke="#22a85a" stroke-width="8" fill="none" stroke-linecap="round"/><polygon points="60,190 62.9,196.9 70,196.9 64.5,202 66.2,209.5 60,205 53.8,209.5 55.5,202 50,196.9 57.1,196.9" fill="#e63946"/><text x="150" y="242" font-family="Georgia,serif" font-weight="bold" font-size="44" fill="#ffffff" text-anchor="middle" letter-spacing="5">BODRUM</text><text x="150" y="268" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="#e63946" text-anchor="middle" letter-spacing="7">PROPERTIES</text></svg></div>
+      <div class="nav-logo-text">Bodrum <span>Properties</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#lease-options">Lease Options</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#contact" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">Manchester Property Specialist</div>
+      <h1>Creative Property<br>Investment with<br><span class="highlight">Bodrum Property Group</span></h1>
+      <p class="hero-desc">Secure and control property without big deposits, without mortgages, and without perfect credit. Led by Ceyhan Sarac — specialising in Lease Options, Assisted Sales, and Creative Finance strategies across Manchester and beyond.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Book a Free Consultation →</a>
+        <a href="#videos" class="btn-secondary">▶ Watch Videos</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-ceyhan.jpg" alt="Bodrum Property Group - Ceyhan Sarac">
+      <div class="hero-stat-cards">
+        <div class="hero-stat">
+          <div class="hero-stat-num">10+</div>
+          <div class="hero-stat-label">Deals Done</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">2+</div>
+          <div class="hero-stat-label">Years Active</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">Creative</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-label">About Ceyhan</div>
+    <div class="about-grid">
+      <div class="about-image-wrapper reveal">
+        <img src="assets/about-creative-finance.jpg" alt="Creative Finance Options with Property">
+      </div>
+      <div class="about-content reveal">
+        <h2 class="section-title">Property Expert.<br>Creative Strategist.<br>Business Owner.</h2>
+        <p>Ceyhan Sarac is the Director and Founder of Bodrum Property Group Limited and Bodrum Properties Limited, based in Manchester, UK. With a deep passion for creative property investment, Ceyhan has completed over 10 creative deals in just the last 2 years.</p>
+        <p>He specialises in techniques that let everyday people secure and control property without the traditional barriers — no big deposits, no mortgages, and no perfect credit history required.</p>
+        <p>Whether you're just getting started or already have a portfolio, Ceyhan helps clients find hidden deals others overlook, structure win-win offers vendors actually say yes to, and navigate the full legal process from offer to keys.</p>
+        <div class="about-highlights">
+          <div class="about-highlight">
+            <div class="about-highlight-icon">🏠</div>
+            <div>
+              <h4>Lease Options</h4>
+              <p>Control property without owning it upfront</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">🤝</div>
+            <div>
+              <h4>Assisted Sales</h4>
+              <p>Win-win deals for vendors and investors</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">📊</div>
+            <div>
+              <h4>Title Splitting</h4>
+              <p>Maximise value from a single property</p>
+            </div>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">💡</div>
+            <div>
+              <h4>Creative Finance</h4>
+              <p>Strategies beyond traditional banking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title" style="color:white">Creative Property Investment<br>Techniques That Work</h2>
+    <p class="section-subtitle">We specialise in strategies that bypass traditional barriers to property investment, helping clients build portfolios with minimal upfront capital.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🔑</div>
+        <h3>Lease Option Deals</h3>
+        <p>Secure the right to buy a property in the future at today's price, while controlling it now. No mortgage required, no big deposits, no credit checks.</p>
+        <span class="service-tag">Most Popular</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🏘️</div>
+        <h3>Assisted Sales</h3>
+        <p>We help distressed sellers find solutions while creating profit opportunities for investors. A win-win approach that solves real problems.</p>
+        <span class="service-tag">Problem Solving</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📐</div>
+        <h3>Title Splitting</h3>
+        <p>Unlock hidden value in properties by splitting freehold and leasehold interests, creating multiple income streams from a single asset.</p>
+        <span class="service-tag">Advanced Strategy</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔍</div>
+        <h3>Property Sourcing</h3>
+        <p>We find below-market-value deals and off-market opportunities for investors, families, and friends looking for their next property.</p>
+        <span class="service-tag">Deal Finding</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">💼</div>
+        <h3>Portfolio Building</h3>
+        <p>Strategic guidance on building a property portfolio using creative techniques, minimising capital requirements while maximising returns.</p>
+        <span class="service-tag">Long-Term Growth</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📋</div>
+        <h3>Mortgage Problem Solving</h3>
+        <p>Failed mortgage application? We turn setbacks into opportunities, converting failed deals into creative arrangements like lease options.</p>
+        <span class="service-tag">Solutions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEASE OPTIONS -->
+<section class="lease-options" id="lease-options">
+  <div class="section-inner">
+    <div class="section-label">Why Lease Options</div>
+    <h2 class="section-title">The Game-Changer in<br>Creative Property Investment</h2>
+    <p class="section-subtitle">So many people believe you need huge deposits, spotless credit, and bank approval to step onto the property ladder. Lease Options prove otherwise.</p>
+    <div class="lease-grid">
+      <div class="lease-card reveal">
+        <div class="lease-card-num">01</div>
+        <h3>No Big Deposit Needed</h3>
+        <p>You don't need tens of thousands sitting in the bank. Lease Options let you start with very little upfront capital.</p>
+      </div>
+      <div class="lease-card reveal">
+        <div class="lease-card-num">02</div>
+        <h3>No Mortgage Required</h3>
+        <p>Forget mountains of bank paperwork. You can control property without a mortgage of your own.</p>
+      </div>
+      <div class="lease-card reveal">
+        <div class="lease-card-num">03</div>
+        <h3>No Credit Checks</h3>
+        <p>Bad credit? Doesn't matter. High credit scores are irrelevant. Lease Options are about smart agreements, not lenders.</p>
+      </div>
+      <div class="lease-card reveal">
+        <div class="lease-card-num">04</div>
+        <h3>No Stamp Duty (SDLT)</h3>
+        <p>One of the biggest cost savings that most people overlook. A major financial advantage of the Lease Option structure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos" id="videos">
+  <div class="section-inner">
+    <div class="section-label">Insights &amp; Education</div>
+    <h2 class="section-title">Learn From Ceyhan</h2>
+    <p class="section-subtitle">Watch Ceyhan share his knowledge on creative property investment, lease options, and building a property business.</p>
+    <div class="videos-grid">
+            <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/morgage problem solving and property deals.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>How I Turned a Failed Mortgage Into a 3-Year Lease Option Deal</h3>
+          <p>Discover how Ceyhan transformed a mortgage rejection into a creative property deal that worked for everyone involved.</p>
+          <span class="video-tag">Case Study</span>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/Ceyhan on lease options.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Why Lease Options Are a Game-Changer</h3>
+          <p>Ceyhan explains the power of lease options and why they're the ultimate creative property investment technique.</p>
+          <span class="video-tag">Strategy</span>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/how he started viewing properties as a business.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Viewing Properties as a Business</h3>
+          <p>How Ceyhan started viewing properties as a business, shifting his mindset from homeowner to investor.</p>
+          <span class="video-tag">Mindset</span>
+        </div>
+      </div>
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/video covering how he learned investing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>How I Learned Property Investing</h3>
+          <p>Ceyhan's journey into property investment — the lessons, the mistakes, and the breakthroughs that shaped his approach.</p>
+          <span class="video-tag">Journey</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES (MOCK) -->
+<section class="properties" id="properties">
+  <div class="section-inner">
+    <div class="section-label">Current Opportunities</div>
+    <h2 class="section-title">Featured Properties</h2>
+    <p class="section-subtitle">A selection of current and recent opportunities sourced through creative investment strategies across Greater Manchester.</p>
+    <div class="properties-grid">
+            <div class="property-card reveal">
+        <div class="property-img">
+          <span class="placeholder-house">🏠</span>
+          <span class="property-badge badge-lease">Lease Option</span>
+        </div>
+        <div class="property-details">
+          <div class="property-price">£145,000</div>
+          <div class="property-address">3 Bed Terrace, Oldham, Manchester</div>
+          <div class="property-features">
+            <span class="property-feature">🛏 3 Beds</span>
+            <span class="property-feature">🚿 1 Bath</span>
+            <span class="property-feature">📐 95m²</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <div class="property-img">
+          <span class="placeholder-house">🏠</span>
+          <span class="property-badge badge-sold">Completed</span>
+        </div>
+        <div class="property-details">
+          <div class="property-price">£210,000</div>
+          <div class="property-address">4 Bed Detached, Bolton, Manchester</div>
+          <div class="property-features">
+            <span class="property-feature">🛏 4 Beds</span>
+            <span class="property-feature">🚿 2 Bath</span>
+            <span class="property-feature">📐 135m²</span>
+          </div>
+        </div>
+      </div>
+      <div class="property-card reveal">
+        <div class="property-img">
+          <img src="/assets/property-lauderdale-crescent.png" alt="58 Lauderdale Crescent, Ardwick" style="width:100%;height:100%;object-fit:cover;">
+          <span class="property-badge badge-available">Available</span>
+        </div>
+        <div class="property-details">
+          <div class="property-price">£1,000,000</div>
+          <div class="property-address">58 Lauderdale Crescent, Ardwick</div>
+          <div class="property-features">
+            <span class="property-feature">🛏 4 Beds</span>
+            <span class="property-feature">🚿 2 Bath</span>
+            <span class="property-feature">📐 120m²</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS (MOCK) -->
+<section class="testimonials" id="testimonials">
+  <div class="section-inner">
+    <div class="section-label">Client Stories</div>
+    <h2 class="section-title" style="color:white">What People Say</h2>
+    <p class="section-subtitle">Real feedback from investors and clients who have worked with Bodrum Property Group.</p>
+    <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Ceyhan helped me secure my first investment property through a lease option when I thought I'd never get on the ladder. His knowledge of creative strategies is outstanding."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M</div>
+          <div>
+            <div class="testimonial-name">Manchester Investor</div>
+            <div class="testimonial-role">First-time investor</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"After my mortgage fell through, Ceyhan showed me there was another way. He structured a deal that worked for me and the seller. Absolutely brilliant service."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Satisfied Client</div>
+            <div class="testimonial-role">Property buyer</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Professional, knowledgeable, and genuinely cares about finding the right deal. Ceyhan sourced a fantastic below-market property that fit my portfolio perfectly."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">A</div>
+          <div>
+            <div class="testimonial-name">Experienced Investor</div>
+            <div class="testimonial-role">Portfolio builder</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="section-inner">
+    <div class="section-label">In The Community</div>
+    <h2 class="section-title">Events &amp; Networking</h2>
+    <p class="section-subtitle">Ceyhan actively engages with the property community through events, launches, and networking across the UK.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="assets/gallery-launch-party.jpg" alt="Property Filter Reloaded Launch Party">
+        <div class="gallery-overlay"><p>Property Filter Reloaded Launch Party</p></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="assets/about-creative-finance.jpg" alt="Creative Finance Options">
+        <div class="gallery-overlay"><p>Creative Finance with Property</p></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="assets/gallery-bodrum-group.jpg" alt="Bodrum Property Group">
+        <div class="gallery-overlay"><p>Bodrum Property Group</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Ready to Make Your<br>Next Creative Deal?</h2>
+    <p class="section-subtitle">Whether you're a first-time investor or looking to expand your portfolio, reach out for a free, no-obligation chat.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item reveal">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:07780811319">07780 811 319</a></p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:ceyhan.sarac@gmail.com">ceyhan.sarac@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <h4>Website</h4>
+            <p><a href="https://bodrumproperties.co.uk" target="_blank">bodrumproperties.co.uk</a></p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Manchester, United Kingdom</p>
+          </div>
+        </div>
+        <div class="contact-item reveal">
+          <div class="contact-icon">📘</div>
+          <div>
+            <h4>Facebook</h4>
+            <p><a href="https://www.facebook.com/profile.php?id=100078836464776" target="_blank">Bodrum Property Group on Facebook</a></p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <h3 class="contact-form-title">Send a Message</h3>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="07XXX XXX XXX">
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm Interested In</label>
+          <select id="interest" name="interest">
+            <option>Lease Option Deals</option>
+            <option>Assisted Sales</option>
+            <option>Property Sourcing</option>
+            <option>Title Splitting</option>
+            <option>Portfolio Building</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us about your property goals..." required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="New enquiry from Bodrum Property Group website">
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" style="margin-bottom:0.5rem">
+          <div class="nav-logo-icon"><svg viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="rg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e83a42"/><stop offset="100%" stop-color="#c42d35"/></linearGradient></defs><polygon points="40,160 100,110 160,160" fill="url(#rg2)"/><polygon points="90,140 140,98 190,140" fill="#d43540"/><polygon points="130,122 170,88 210,122" fill="#bc2a32"/><path d="M 30,165 Q 80,158 150,162 Q 200,165 260,155" stroke="#1a7ab5" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M 30,177 Q 80,170 150,174 Q 200,177 260,167" stroke="#22a85a" stroke-width="8" fill="none" stroke-linecap="round"/><polygon points="60,190 62.9,196.9 70,196.9 64.5,202 66.2,209.5 60,205 53.8,209.5 55.5,202 50,196.9 57.1,196.9" fill="#e63946"/><text x="150" y="242" font-family="Georgia,serif" font-weight="bold" font-size="44" fill="#ffffff" text-anchor="middle" letter-spacing="5">BODRUM</text><text x="150" y="268" font-family="Arial,sans-serif" font-weight="bold" font-size="20" fill="#e63946" text-anchor="middle" letter-spacing="7">PROPERTIES</text></svg></div>
+          <div class="nav-logo-text">Bodrum <span>Properties</span></div>
+        </a>
+        <p>Bodrum Property Group Ltd. &amp; Bodrum Properties Ltd. Creative property investment specialists based in Manchester, UK. Helping investors secure deals through Lease Options, Assisted Sales, and Creative Finance.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Ceyhan</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#lease-options">Lease Options</a></li>
+          <li><a href="#properties">Properties</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Lease Option Deals</a></li>
+          <li><a href="#services">Assisted Sales</a></li>
+          <li><a href="#services">Title Splitting</a></li>
+          <li><a href="#services">Property Sourcing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:07780811319">07780 811 319</a></li>
+          <li><a href="mailto:ceyhan.sarac@gmail.com">ceyhan.sarac@gmail.com</a></li>
+          <li><a href="https://bodrumproperties.co.uk">bodrumproperties.co.uk</a></li>
+          <li><a href="#contact">Send a Message</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bodrum Property Group Ltd. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/profile.php?id=100078836464776" target="_blank" title="Facebook">f</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
